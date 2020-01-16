@@ -5,16 +5,18 @@ const Gig = db.define("blog", {
   title: {
     type: Sequelize.STRING
   },
-  title: {
+  keywords: {
     type: Sequelize.STRING
   },
-  title: {
+  description_field: {
     type: Sequelize.STRING
   },
-  title: {
+  author: {
     type: Sequelize.STRING
   },
-  title: {
+  contact_email: {
     type: Sequelize.STRING
   }
 });
+
+module.exports = Gig;

@@ -3,6 +3,9 @@ const exphbs = require("express-handlebars");
 const bodyParser = require("body-parser");
 const path = require("path");
 
+const PORT = process.env.PORT || 5000;
+const app = express();
+
 const db = require("./config/database");
 
 db.authenticate()
@@ -13,8 +16,7 @@ db.authenticate()
     console.log(err);
   });
 
-const PORT = process.env.PORT || 5000;
-const app = express();
+app.use("/blogs", require("./routes/blogs"));
 
 app.get("/", (req, res) => {
   res.send("Hello");
