@@ -1,0 +1,39 @@
+<section id="add" class="container">
+    <div class="form-wrap">
+        <h1>Add A Blog</h1>
+        <p>Your contact email will be shared with registered users to apply to your blog</p>
+        {{#each errors}}
+        <div class="error">
+            <p>{{text}}</p>
+        </div>
+        {{/each}}
+        <form action="/gigs/add" method="POST">
+            <div class="input-group">
+                <label for="title">Blog Title</label>
+                <input type="text" name="title" id="title" class="input-box" placeholder="eg. Why express is great"
+                    maxlength="100" value={{title}}>
+            </div>
+            <div class="input-group">
+                <label for="technologies">Searchable Keywords</label>
+                <input type="text" name="keywords" id="technologies" class="input-box"
+                    placeholder="eg. javascript, react, PHP" maxlength="100" value={{keywords}}>
+            </div>
+            <div class="input-group">
+                <label for="budget">Author</label>
+                <input type="number" name="author" id="budget" class="input-box" placeholder="eg. John Doe"
+                    value={{author}}>
+            </div>
+            <div class="input-group">
+                <label for="description">Blog entry</label>
+                <textarea name="description_field" id="description" class="input-box"
+                    placeholder="Describe the details of the gig" rows="10">{{description_field}}</textarea>
+            </div>
+            <div class="input-group">
+                <label for="budget">Contact Email</label>
+                <input type="email" name="contact_email" id="contactemail" class="input-box"
+                    placeholder="Enter an email" value={{contact_email}}>
+            </div>
+            <input type="submit" value="Add Blog" class="btn btn-reverse">
+        </form>
+    </div>
+</section>

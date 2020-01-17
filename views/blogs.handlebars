@@ -1,0 +1,20 @@
+<section id="gigs" class="container">
+    <h1>All Gigs</h1>
+
+    {{#each blogs}}
+    <div class="gig">
+        <h3>{{title}}</h3>
+        <p>{{description_field}}</p>
+        <ul>
+            <li>Author: {{author}}</li>
+            <li><a href="mailto:{{contact_email}}" class="btn btn-reverse">Contact</a></li>
+        </ul>
+        <div class="tech">
+            <small>Keywords: <span>{{keywords}}</span></small>
+        </div>
+    </div>
+    {{else}}
+    <p>No gigs available</p>
+    {{/each}}
+
+</section>

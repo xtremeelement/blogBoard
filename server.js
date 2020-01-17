@@ -16,10 +16,16 @@ db.authenticate()
     console.log(err);
   });
 
+app.engine("handlebars", exphbs({ defaultLayout: "default" }));
+app.set("view engine", "handlebars");
+
+app.use(express.static(path.join(__dirname, "public")));
+
 app.use("/blogs", require("./routes/blogs"));
 
+//Index route
 app.get("/", (req, res) => {
-  res.send("Hello");
+  res.render("index", { layout: "landing" });
 });
 
 app.listen(PORT, (err, res) => {
