@@ -7,7 +7,7 @@
             <p>{{text}}</p>
         </div>
         {{/each}}
-        <form action="/gigs/add" method="POST">
+        <form action="/blogs/add" method="POST">
             <div class="input-group">
                 <label for="title">Blog Title</label>
                 <input type="text" name="title" id="title" class="input-box" placeholder="eg. Why express is great"
@@ -20,7 +20,7 @@
             </div>
             <div class="input-group">
                 <label for="budget">Author</label>
-                <input type="number" name="author" id="budget" class="input-box" placeholder="eg. John Doe"
+                <input type="text" name="author" id="budget" class="input-box" placeholder="eg. John Doe"
                     value={{author}}>
             </div>
             <div class="input-group">

@@ -21,6 +21,7 @@ router.get("/add", (req, res) => {
 
 // Add blog
 router.post("/add", (req, res) => {
+  console.log(req.body);
   const data = {
     title: "Looking for a react developoer",
     keywords: "react,javascript,html,css",
